@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace FoodStoreManagement
 {
-    public partial class Form1 : Form
+    public partial class Form_DangNhap : Form
     {
         string UsernameLogin="u";
         string PasswordLogin="1";
         string UsernamePlaceHolder = "Enter Your Username";
         string PasswordPlaceHolder = "Enter Your Password";
-        public Form1()
+        public Form_DangNhap()
         {
             InitializeComponent();
         }
@@ -109,9 +109,9 @@ namespace FoodStoreManagement
             {
                 if (UsernameTextBox.Text == UsernameLogin && PasswordTextBox.Text == PasswordLogin)
                 {
-                    Form3 frm = new Form3();
-                    frm.Show();
-                    this.Visible = false;
+                    //Form3 frm = new Form3();
+                    //frm.Show();
+                    //this.Visible = false;
                 }
                 else
                     label7.Text = "Nhập sai tên tài khoản hoặc mật khẩu";
@@ -121,9 +121,15 @@ namespace FoodStoreManagement
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
-            frm.Show();
-            this.Visible = false;
+            //Form_DangKy frm = new Form_DangKy();
+            //frm.Show();
+            //this.Visible = false;
+            
+            Form_DangKy fDangKy = new Form_DangKy();
+            
+            this.Hide();
+            fDangKy.ShowDialog();
+            this.Show();
         }
     }
 }
